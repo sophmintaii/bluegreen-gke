@@ -6,7 +6,7 @@ metadata:
     app: hello
     color: blue
 spec:
-  replicas: 0
+  replicas: 2
   selector:
     matchLabels:
       app: hello
@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: hello
-          image: REPLACED_BY_CI
+          image: sofiikam/hello-bluegreen:8b39b59d6bd18549b130da9419db4ca78dec6461
           ports:
             - name: http
               containerPort: 8050
